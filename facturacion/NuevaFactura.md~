@@ -1,6 +1,4 @@
-﻿[Inicio](../README.md)
-
-# API de Creación de Facturas Latinium
+﻿# API de Creación de Facturas Latinium
 
 ## Endpoint
 `POST /api/{tenantId}/Facturacion`

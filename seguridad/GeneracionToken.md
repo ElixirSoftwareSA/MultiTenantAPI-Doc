@@ -1,4 +1,6 @@
-﻿# Generación de Token para API Latinium
+﻿[Inicio](../README.md)
+
+# Generación de Token para API Latinium
 
 ## Endpoint
 `POST /api/{tenantId}/auth`
