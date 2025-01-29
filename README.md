@@ -1,9 +1,17 @@
-# Documentacion API multitenant Latinium
+# Documentación API MultiTenant Latinium
 
-Servicio para generacion de token [/auth](/seguridad/GeneracionToken.md).
+Esta API permite gestionar la autenticación, facturación y pagos en un entorno multi-tenant.
 
-Servicio para creacion de una factura [/facturacion](/facturacion/NuevaFactura.md).
+## Endpoints Principales
 
-Servicio para creacion de facturas en lote [/facturacion/collection](/facturacion/NuevaFacturaLote.md).
+### Autenticación
+- **Generación de Token:** [/auth](/seguridad/GeneracionToken.md)
 
-Servicio para insertar pagos [/api/{tenantId}/pagos](/pagos/NuevoPago.md).
+### Facturación
+- **Creación de una factura:** [/facturacion](/facturacion/NuevaFactura.md)
+- **Creación de facturas en lote:** [/facturacion/collection](/facturacion/NuevaFacturaLote.md)
+
+### Pagos
+- **Inserción de pagos:** [/api/{tenantId}/pagos](/pagos/NuevoPago.md)
+
+---
