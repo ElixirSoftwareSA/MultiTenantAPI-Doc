@@ -87,21 +87,21 @@ La solicitud debe contener un array de objetos de factura, donde cada objeto sig
 #### Éxito (200 OK)
 ```json
 {
-  "success": true,
-  "message": "Se guardaron 2 facturas correctamente", 
-  "data": [
-    {
-      "numero": "001002000000381",
-      "success": true,
-      "message": "Se guardó la factura con número: '001002000000381' correctamente"
-    },
-    {
-      "numero": "001002000000382",
-      "success": true,
-      "message": "Se guardó la factura con número: '001002000000382' correctamente"
-    }
-  ],
-  "time": 2345
+    "success": true,
+    "message": "Se guardaron 2 facturas correctamente", 
+    "data": [
+        {
+            "numero": "001002000000381",
+            "success": true,
+            "message": "Se guardó la factura con número: '001002000000381' correctamente"
+        },
+        {
+            "numero": "001002000000382",
+            "success": true,
+            "message": "Se guardó la factura con número: '001002000000382' correctamente"
+        }
+    ],
+    "time": 2345
 }
 ```
 

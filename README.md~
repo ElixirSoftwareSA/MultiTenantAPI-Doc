@@ -1,9 +1,37 @@
-# Documentacion API multitenant Latinium
+<p align="center">
+	<a>
+		<picture>
+			<source srcset="https://www.elixirsoftware.com/path-to-dark-logo.png" media="(prefers-color-scheme: dark)">
+			<img src="https://www.elixirsoftware.com/path-to-light-logo.png" loading="eager" />
+		</picture>
+	</a><br>
+	<b>Una empresa líder en desarrollo de software que ofrece soluciones innovadoras en todas las industrias.</b>
+</p>
 
-Servicio para generacion de token [/auth](/seguridad/GeneracionToken.md).
+<p align="center">
+	<a href="https://www.facebook.com/Latinium"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook" alt="Facebook" /></a>
+	<a href="https://www.instagram.com/latiniumsoftware/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram" alt="Instagram" /></a>
+	<a href="https://www.tiktok.com/@elixirsoftwarecompany"><img src="https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok" alt="TikTok" /></a>
+	<br>
+	<a href="mailto:info@elixir.ec"><img alt="Email" src="https://img.shields.io/badge/Email-0078D4?style=for-the-badge&logo=microsoft-outlook" /></a>
+	<a href="https://www.elixirsoftware.com/contact"><img alt="Contact Us" src="https://img.shields.io/badge/Contact%20Us-28A745?style=for-the-badge&logo=whatsapp" /></a>
+</p>
 
-Servicio para creacion de una factura [/facturacion](/facturacion/NuevaFactura.md).
 
-Servicio para creacion de facturas en lote [/facturacion/collection](/facturacion/NuevaFacturaLote.md).
+# Documentación API MultiTenant Latinium
 
-Servicio para insertar pagos [/api/{tenantId}/pagos](/pagos/NuevoPago.md).
+Esta API permite gestionar la autenticación, facturación y pagos en un entorno multi-tenant.
+
+## Endpoints Principales
+
+### Autenticación
+- **Generación de Token:** [/auth](/seguridad/GeneracionToken.md)
+
+### Facturación
+- **Creación de una factura:** [/facturacion](/facturacion/NuevaFactura.md)
+- **Creación de facturas en lote:** [/facturacion/collection](/facturacion/NuevaFacturaLote.md)
+
+### Pagos
+- **Inserción de pagos:** [/api/{tenantId}/pagos](/pagos/NuevoPago.md)
+
+---
