@@ -1,4 +1,4 @@
-This document was moved to [another location](../seguridad/GeneracionToken.md).
+This document was moved to [another location](/seguridad/GeneracionToken.md).
 
 # API de Creación de Facturas Latinium
 
