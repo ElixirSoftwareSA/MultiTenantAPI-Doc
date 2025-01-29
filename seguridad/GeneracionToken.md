@@ -1,8 +1,7 @@
 ﻿# Generacion de Token para API Latinium
 
-
 ## Endpoint
-`POST /api/{tenantId}/Facturacion`
+`POST /api/{tenantId}/auth`
 
 ### Descripción
 Este endpoint permite generar un token JWT para un usuario autenticado en un contexto multi-tenant. Para obtener el token, es obligatorio proporcionar un **tenantId**, un **username** y una **password** válidos los cuales son proporcianos por la Empresa Elixir Software.
@@ -20,7 +19,9 @@ Este endpoint permite generar un token JWT para un usuario autenticado en un con
 ### Authenticacion Exitosa
 - **Status Code**: 200 OK
 - **Response Body**:
-  ```json
-  {
-    "token": "generated_jwt_token"
-  }
+
+```json
+{
+  "token": "generated_jwt_token"
+}
+```
