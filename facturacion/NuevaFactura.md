@@ -16,7 +16,7 @@ Crea una nueva factura en el sistema Latinium con validación integral y procesa
 
 #### Campos Principales
 
-- **Cliente**: Información del cliente (obligatorio)
+- **Cliente**: Información del cliente (obligatorio) (Este se creará en caso de no existir un registro)
     - `Nombre`: Nombre del cliente
     - `Direccion`: Dirección del cliente
     - `Ruc`: Número de identificación fiscal (obligatorio para vincular o crear un cliente en la factura)
@@ -24,14 +24,14 @@ Crea una nueva factura en el sistema Latinium con validación integral y procesa
     - `Telefono`: Teléfono del cliente
     - `IdTipoRuc`: Tipo de identificación fiscal (obligatorio para nuevos clientes)
 
-- **Proyecto**: Información del centro de costos (opcional)
+- **Proyecto**: Información del centro de costos (opcional) (Este se creará en caso de no existir un registro)
     - `CentroCosto`: Nombre del centro de costos (obligatorio para vincular o crear un proyecto en la factura)
 
-- **SubProyecto**: Información del proyecto (opcional)
+- **SubProyecto**: Información del proyecto (opcional) (Este se creará en caso de no existir un registro)
     - `Nombre`: Nombre del subproyecto (obligatorio para nuevos subproyectos)
     - `Codigo`: Código del subproyecto (obligatorio para vincular o crear un subproyecto en la factura)
 
-- **Personal**: Detalles del vendedor (opcional)
+- **Personal**: Detalles del vendedor (opcional) 
     - `Cedula`: Número de identificación fiscal (obligatorio para vincular un personal)
 
 - **Compra**: Detalles de la compra (obligatorio)
@@ -47,13 +47,13 @@ Crea una nueva factura en el sistema Latinium con validación integral y procesa
     - `Numero`: Número de factura (opcional, si no se envía será generado)
 
 - **Detalles**: Líneas de la factura (obligatorio)
-    - **Articulo**: Detalles del producto (obligatorio)
+    - **Articulo**: Detalles del producto (obligatorio) (Este se creará en caso de no existir un registro)
         - `Nombre`: Nombre del producto (obligatorio para nuevos artículos)
         - `Codigo`: Código de producto (obligatorio)
-    - **SubProyecto**: Información del proyecto (opcional)
+    - **SubProyecto**: Información del proyecto (opcional) (Este se creará en caso de no existir un registro)
         - `Nombre`: Nombre del subproyecto (obligatorio para nuevos subproyectos)
         - `Codigo`: Código del subproyecto (obligatorio para vincular o crear un subproyecto al detalle de la factura)
-    - **Proyecto**: Información del centro de costos (opcional)
+    - **Proyecto**: Información del centro de costos (opcional) (Este se creará en caso de no existir un registro)
         - `CentroCosto`: Nombre del centro de costos (obligatorio para vincular o crear un proyecto al detalle de la factura)
     - `Cantidad`: Cantidad (obligatorio)
     - `Precio`: Precio unitario (obligatorio)
