@@ -48,6 +48,7 @@ Crea una nueva factura en el sistema Latinium con validación integral y procesa
     - `CodigoComprobante`: Código del comprobante (obligatorio)
     - `DiasCredito`: Días de crédito (opcional)
     - `Numero`: Número de factura (opcional, si no se envía será generado)
+    - `Recalcular`: Campo booleano que determina si el total de la factura será recalculado en Latinium (opcional, por defecto `false`)
 
 - **Detalles**: Líneas de la factura (obligatorio)
     - **Articulo**: Detalles del producto (obligatorio) (Este se creará en caso de no existir un registro)
@@ -100,7 +101,8 @@ Crea una nueva factura en el sistema Latinium con validación integral y procesa
 		"comprobante": "string",
 		"codigoComprobante": "string",
 		"diasCredito": 0,
-		"numero": "string"
+		"numero": "string",
+		"recalcular": true
 	},
 	"detalles": [
 		{
@@ -187,6 +189,10 @@ Crea una nueva factura en el sistema Latinium con validación integral y procesa
 - **Datos de Compra**:
     - Debe incluir obligatoriamente los siguientes datos:
         - **IdTipoFactura**.
+- **Recalcular**:
+    - Campo booleano que determina si el total de la factura será recalculado en Latinium:
+        - Si es `true`: El total será recalculado automáticamente en Latinium.
+        - Si es `false`: El total se mantendrá tal como fue enviado en la solicitud.
 
 ## Validaciones Generales del Proceso
 - En caso de error en cualquier validación:
@@ -250,7 +256,8 @@ Crea una nueva factura en el sistema Latinium con validación integral y procesa
 		"comprobante": "Comprobante de ejemplo para nueva factura",
 		"codigoComprobante": "18",
 		"diasCredito": 5,
-		"Numero": "001001005478"
+		"Numero": "001001005478",
+		"recalcular": true
 	},
 	"detalles": [
 		{
