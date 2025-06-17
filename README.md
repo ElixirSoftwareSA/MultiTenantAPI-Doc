@@ -1,7 +1,7 @@
 <p align="center">
 	<a>
 		<picture>
-			<source height="40px" srcset="https://elixir.ec/Imagenes/Logo-elixir-blanco-512x512-1.webp" media="(prefers-color-scheme: dark)">
+			<source height="120px" srcset="https://elixir.ec/Imagenes/Logo-elixir-blanco-512x512-1.webp" media="(prefers-color-scheme: dark)">
 			<img src="https://elixir.ec/images/logo.png" loading="eager" />
 		</picture>
 	</a><br>
