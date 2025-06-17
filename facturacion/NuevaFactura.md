@@ -1,4 +1,4 @@
-﻿[Inicio](../README.md)
+[Inicio](../README.md)
 
 # API de Creación de Facturas Latinium
 
@@ -23,6 +23,9 @@ Crea una nueva factura en el sistema Latinium con validación integral y procesa
     - `Email`: Correo electrónico del cliente (obligatorio para nuevos clientes)
     - `Telefono`: Teléfono del cliente
     - `IdTipoRuc`: Tipo de identificación fiscal (obligatorio para nuevos clientes)
+    - `Complemento`: Información adicional del cliente (opcional)
+        - `NombreGrupo`: Nombre del grupo de cliente (opcional, si se proporciona se buscará el ID correspondiente)
+        - `FormaPago`: Nombre de la forma de pago (opcional, si se proporciona se buscará el ID correspondiente)
 
 - **Proyecto**: Información del centro de costos (opcional) (Este se creará en caso de no existir un registro)
     - `CentroCosto`: Nombre del centro de costos (obligatorio para vincular o crear un proyecto en la factura)
@@ -71,7 +74,11 @@ Crea una nueva factura en el sistema Latinium con validación integral y procesa
 		"ruc": "string",
 		"email": "string",
 		"telefono": "string",
-		"idTipoRuc": 0
+		"idTipoRuc": 0,
+		"complemento": {
+			"nombreGrupo": "GRUPO A",
+			"formaPago": "EFECTIVO"
+		}
 	},
 	"proyecto": {
 		"centroCosto": "string"
@@ -133,6 +140,13 @@ Crea una nueva factura en el sistema Latinium con validación integral y procesa
     - Debe ser válido y coincidir con el listado permitido:
         - **Proveedores**: `[1, 2, 3, 8]`
         - **Clientes**: `[4, 5, 6, 7, 8, 9]`
+- **Complemento**:
+    - **NombreGrupo**: 
+        - Es opcional
+        - Si se proporciona, debe existir un grupo de cliente con ese nombre
+    - **FormaPago**:
+        - Es opcional
+        - Si se proporciona, debe existir una forma de pago con ese nombre
 - **Validación por Tipo de Cliente**:
     - Si es proveedor y el `IdTipoRuc` no pertenece a los valores permitidos para proveedores, se lanza error.
     - Si no es proveedor y el `IdTipoRuc` no pertenece a los valores permitidos para clientes, se lanza error.
@@ -210,7 +224,11 @@ Crea una nueva factura en el sistema Latinium con validación integral y procesa
 		"direccion": "TADAY Y CAHUASQUI",
 		"email": "erikportilla.pesantez@outlook.es",
 		"telefono": "0968176565",
-		"IdTipoRuc": 5
+		"IdTipoRuc": 5,
+		"complemento": {
+			"nombreGrupo": "GRUPO A",
+			"formaPago": "EFECTIVO"
+		}
 	},
 	"proyecto": {
 		"centrocosto": "QUITO-CENTRO"
@@ -306,3 +324,5 @@ Crea una nueva factura en el sistema Latinium con validación integral y procesa
 | `El número de pasaporte del cliente debe tener como mínimo 3 y máximo 13 caracteres!` | Longitud de número de pasaporte inválida                         |
 | `El ruc del cliente dene tener 13 digitos!` | RUC de cliente debe tener 13 dígitos                             |
 | `La cedula del cliente debe tener 10 digitos!` | Cédula de cliente debe tener 10 dígitos                          |
+| `No se encontró el grupo de cliente con nombre: {nombreGrupo}` | Grupo de cliente no encontrado                                   |
+| `No se encontró la forma de pago con nombre: {formaPago}` | Forma de pago no encontrada                                      |
